@@ -1,0 +1,12 @@
+1.In Project folder create Two folder i.api and ii.client
+2.In client folder clone the Raw-react App from my git, Where Tailwind Css is Already Configured. and Poppins fonts.
+3.In app Page create the routing, - Home, Products, and Product.
+4.Learn the Outlet from react-router-dom.
+5.What is Outlet? and why use that in our Routing and How can we use the Outlet for routing.
+6.suppose in my component page Like - Home , or Product or any other routing pages, I want to fixed Navbar 
+    and footer all the time, for that reason I use outlet in react-router-dom.
+
+
+
+💠New Things Learned..
+  - Outlet in react-router-dom
