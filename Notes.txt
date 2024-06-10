@@ -6,6 +6,9 @@
 6.suppose in my component page Like - Home , or Product or any other routing pages, I want to fixed Navbar 
     and footer all the time, for that reason I use outlet in react-router-dom.
 
+//Stying the Navbar
+7.So Right now styling the Navbar.
+
 
 
 💠New Things Learned..
