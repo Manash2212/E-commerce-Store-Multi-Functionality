@@ -10,18 +10,18 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <section className="navbar py-2 px-3 ">
+    <section className="navbar py-2 px-5 text-lg box-border font-primary w-full fixed z-10">
       <div className="Wrapper flex items-center justify-between">
         <div className="Left flex gap-3">
-          <div className="item flex gap-1 ">
+          <div className="item flex gap-1 items-center ">
             <img
-              className="w-[40px] h-[25px] object-cover"
+              className="w-[38px] h-[22px] object-cover"
               src="/images/indian-flag.png"
               alt="flag"
             />
             <IoIosArrowDown className="cursor-pointer" />
           </div>
-          <div className="item flex gap-1">
+          <div className="item flex gap-1 items-center">
             <span className="text-xl font-primary">INR</span>
             <IoIosArrowDown className="cursor-pointer" />
           </div>
@@ -63,10 +63,31 @@ const Navbar = () => {
             <Link to="/">Stores</Link>
           </div>
           <div className="logo flex justify-between gap-4 text-xl">
-            <CiSearch />
-            <CiHeart />
-            <IoPersonOutline />
-            <MdOutlineShoppingCart />
+            <div className="item">
+              <Link className="cursor-pointer" to={"/"}>
+                <CiSearch />
+              </Link>
+            </div>
+            <div className="item">
+              <Link className="cursor-pointer" to={"/"}>
+                <CiHeart />
+              </Link>
+            </div>
+
+            <div className="item">
+              <Link className="cursor-pointer" to={"/"}>
+                <IoPersonOutline />
+              </Link>
+            </div>
+
+            <div className="item relative w-8 ">
+              <Link className="cursor-pointer text-2xl" to={"/"}>
+                <MdOutlineShoppingCart />
+              </Link>
+              <div className="absolute  right-0 -top-1 rounded-full  w-4 h-4 text-sm bg-blue-400 text-white flex items-center justify-center">
+                <span className=" ">5</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
