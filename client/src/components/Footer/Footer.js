@@ -8,7 +8,7 @@ import { AiFillInstagram } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <div className="footer font-primary  ">
+    <div className="footer font-primary w-full ">
       <div className="con1 flex items-center justify-around py-10">
         <div className="left ">
           <div className="content">
