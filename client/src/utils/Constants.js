@@ -7,3 +7,38 @@ export const SLIDER_IMAGES = [
   "https://images.unsplash.com/photo-1656796050212-0fa1e75bc165?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1536010305525-f7aa0834e2c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
+
+export const FEATURED_PRODUCTS_DATA = [
+  {
+    id: 1,
+    img: "http://",
+    img2: "http",
+    isNew: true,
+    title: " Hat",
+    oldprice: 999,
+    newprice: 499,
+  },
+  {
+    id: 2,
+    img: "http://",
+    img2: "http",
+    isNew: true,
+    title: " Hat",
+    oldprice: 999,
+    newprice: 499,
+  },
+  {
+    id: 3,
+    img: "http://",
+    title: " Hat",
+    oldprice: 999,
+    newprice: 499,
+  },
+  {
+    id: 4,
+    img: "http://",
+    title: " Hat",
+    oldprice: 999,
+    newprice: 499,
+  },
+];

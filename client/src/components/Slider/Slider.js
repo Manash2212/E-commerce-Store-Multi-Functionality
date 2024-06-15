@@ -1,8 +1,12 @@
-import React, { useState } from "react";
-import { SLIDER_IMAGES as slides } from "../../utils/Constants";
+import React, { useEffect, useState } from "react";
+// import { SLIDER_IMAGES as slides } from "../../utils/Constants";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const Slider = () => {
+const Slider = ({
+  children: slides,
+  autoSlide = false,
+  autoSlideInterval = 3000,
+}) => {
   // slider Hook
   const [currentSlide, setCurrentSlide] = useState(0);
   const PrevSlide = () => {
@@ -12,21 +16,19 @@ const Slider = () => {
     setCurrentSlide(currentSlide === 3 ? 0 : (prev) => prev + 1);
   };
 
+  useEffect(() => {
+    if (!autoSlide) return;
+    const slideInterval = setInterval(NextSlide, autoSlideInterval);
+    return () => clearInterval(slideInterval);
+  });
   return (
-    <div className="slider w-full h-full">
+    <div className="slider w-full h-[85vh]">
       <div className="container overflow-hidden flex  max-w-[100vw]  h-full relative ">
         <div
-          className="img-container flex"
+          className="img-container flex transition-all ease-in duration-500"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
-          {slides.map((slider, i) => (
-            <img
-              className="min-w-full h-full object-cover"
-              src={slider}
-              alt="img"
-              key={i}
-            />
-          ))}
+          {slides}
         </div>
 
         {/* For Arrow Click */}
@@ -51,7 +53,7 @@ const Slider = () => {
             <div
               onClick={() => setCurrentSlide(i)}
               key={"circle" + i}
-              className={`rounded-full w-1.5 h-1 ${
+              className={`transition-all rounded-full w-1.5 h-1 ${
                 i === currentSlide ? "bg-white scale-125" : "bg-gray-400"
               } cursor-pointer`}
             ></div>
