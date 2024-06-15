@@ -1,6 +1,10 @@
 import React from "react";
 import Slider from "../../components/Slider/Slider";
-import { SLIDER_IMAGES } from "../../utils/Constants";
+import {
+  FEATURED_TEXT,
+  SLIDER_IMAGES,
+  TRENDING_TEXT,
+} from "../../utils/Constants";
 import FeatuerdProduct from "../../components/FeatuerdProducts/FeatuerdProduct";
 
 const Home = () => {
@@ -16,8 +20,8 @@ const Home = () => {
           />
         ))}
       </Slider>
-      <FeatuerdProduct type="featured" />
-      {/* <FeatuerdProduct type="trending" /> */}
+      <FeatuerdProduct type="featured" description={FEATURED_TEXT} />
+      <FeatuerdProduct type="trending" description={TRENDING_TEXT} />
     </div>
   );
 };

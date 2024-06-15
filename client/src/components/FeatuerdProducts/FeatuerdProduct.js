@@ -2,24 +2,15 @@ import React from "react";
 import { FEATURED_PRODUCTS_DATA } from "../../utils/Constants";
 import Card from "../Card/Card";
 
-const FeatuerdProduct = ({ type }) => {
+const FeatuerdProduct = ({ type, description }) => {
   return (
-    <div className="featuredProducts my-20 mx-10">
-      <div className="container">
-        <div className="top flex ">
-          <h1 className="uppercase flex-2">{type}</h1>
-          <p className="flex-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            sapiente, totam magni optio, corporis unde aut quia architecto
-            suscipit expedita beatae vel temporibus molestias nostrum
-            voluptatibus deleniti quisquam pariatur voluptas iusto laboriosam
-            minima illum aliquid ut? Laborum aperiam ipsam impedit voluptate
-            odio eveniet culpa quaerat, facere voluptas maiores dignissimos,
-            blanditiis dolore reiciendis sint enim doloribus molestiae beatae
-            ratione animi accusantium.
-          </p>
+    <div className="featuredProducts my-20 mx-10 font-primary">
+      <div className="container w-full">
+        <div className="top flex mb-12 justify-between ">
+          <h1 className="uppercase flex-1  text-center text-[40px]">{type}</h1>
+          <p className="w-[50%] text-justify">{description}</p>
         </div>
-        <div className="bottom ">
+        <div className="bottom flex justify-center w-[80%] mx-auto gap-10">
           {FEATURED_PRODUCTS_DATA.map((item) => (
             <Card key={item.id} product={item} />
           ))}
