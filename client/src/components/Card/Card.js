@@ -7,7 +7,7 @@ const Card = ({ product }) => {
     <div className="cards py-20 w-full">
       <div className="container group [perspective:1000px] ">
         <Link to={`/product/${product.id}`}>
-          <div className="image relative w-[280px] h-[350px] shadow-xl rounded-xl">
+          <div className="image relative w-[280px] h-[350px] shadow-xl rounded-xl ">
             <div className="img1 absolute inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]  shadow-md rounded-xl">
               <img
                 src={product.img}
