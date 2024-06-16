@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Card = ({ product }) => {
   const [newItem, setNewItem] = useState(product.isNew);
   return (
-    <div className="cards py-20 w-full">
+    <div className="cards py-5">
       <div className="container group [perspective:1000px] ">
         <Link to={`/product/${product.id}`}>
-          <div className="image relative w-[280px] h-[350px] shadow-xl rounded-xl ">
+          <div className="image relative w-[250px] h-[350px] shadow-xl rounded-xl ">
             <div className="img1 absolute inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]  shadow-md rounded-xl">
               <img
                 src={product.img}
@@ -27,7 +27,7 @@ const Card = ({ product }) => {
               />
             </div>
             {product.isNew && (
-              <span className="medium absolute top-3 left-1 w-[110px] py-0.5 px-0.5  text-center bg-white text-green-600 text-sm">
+              <span className="medium absolute top-3 left-0 w-[110px] py-0.5 px-0.5  text-center bg-white text-green-600 text-sm">
                 New Collection
               </span>
             )}
