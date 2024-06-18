@@ -6,11 +6,11 @@ import { MdDeleteForever } from "react-icons/md";
 const Cart = () => {
   return (
     <div className="cart font-primary relative h-full">
-      <div className="container absolute top-[10px] right-0 shadow-2xl w-[500px] bg-gray-100 px-4 py-2">
+      <div className="container absolute top-[60px] right-0 shadow-2xl w-[500px] h-[580px] bg-gray-100 px-4 py-2">
         <h1 className="py-2 w-full border-b-2 border-gray-700">
           Products in your Cart
         </h1>
-        <div className="items flex flex-col gap-y-1 pr-2 h-[400px] lg:h-[500px] overflow-y-auto overflow-x-hidden border-b">
+        <div className="items flex flex-col gap-y-1 pr-2 h-[400px]  overflow-y-auto overflow-x-hidden border-b">
           {FEATURED_PRODUCTS_DATA.map((item) => (
             <div
               className="item flex items-center justify-center mx-auto  gap-y-3 gap-x-2 py-1 shadow-md pr-2"

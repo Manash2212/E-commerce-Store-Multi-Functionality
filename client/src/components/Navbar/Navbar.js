@@ -40,18 +40,6 @@ const Navbar = () => {
             <span className="text-xl font-primary">INR</span>
             <IoIosArrowDown className="cursor-pointer" />
           </div>
-          <div className="item">
-            <Link to="/products/1">Men</Link>
-          </div>
-          <div className="item">
-            <Link to="/products/2">Women</Link>
-          </div>
-          <div className="item">
-            <Link to="/products/3">Children</Link>
-          </div>
-          <div className="item">
-            <Link to="/products/4">Accessories</Link>
-          </div>
         </div>
         <div className="Center">
           <div className="item">
@@ -65,24 +53,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="Right text-lg flex justify-between items-center gap-5">
-          <div className="item">
-            <Link to="/">Homepage</Link>
-          </div>
-          <div className="item">
-            <Link to="/">About</Link>
-          </div>
-          <div className="item">
-            <Link to="/">Contact</Link>
-          </div>
-          <div className="item">
-            <Link to="/">Stores</Link>
-          </div>
           <div className="logo flex justify-between gap-4 text-xl">
-            <div className="item">
-              <Link className="cursor-pointer" to={"/"}>
-                <CiSearch />
-              </Link>
-            </div>
             <div className="item">
               <Link className="cursor-pointer" to={"/"}>
                 <CiHeart />
@@ -109,21 +80,52 @@ const Navbar = () => {
         </div>
       </div>
       {IsOpen && <Cart />}
-      {/* bg-gray-400 fixed top-0 w-full" */}
       <div
-        className={`${isActive ? "fixed top-0" : "sticky"} bg-gray-400 w-full`}
+        className={`${
+          isActive ? "fixed top-0" : "sticky"
+        } flex  items-center justify-between px-2 bg-gray-200 w-full h-[50px]`}
       >
-        <ul className="flex items-center justify-around">
-          <li>Men</li>
-          <li>Men</li>
-          <li>Men</li>
-          <li>Men</li>
-          <li>Men</li>
-          <li>Men</li>
-          <li>Men</li>
-          <li>Men</li>
-          <li>Men</li>
-        </ul>
+        <div className="items h-full   w-[60%] ">
+          <ul className="flex h-full items-center justify-around text-black/80 ">
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Men</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Women</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Kids</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Designer</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Clothing</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Bags</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Footwear</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Accessories</Link>
+            </li>
+            <li className="h-full flex items-center cursor-pointer px-1 hover:bg-white">
+              <Link to={"/"}>Offers</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="search  bg-white py-[2px] w-[30%]">
+          <div className="item flex items-center justify-start  w-full">
+            <CiSearch className="bg-white text-2xl mx-1" />
+            <input
+              type="search"
+              placeholder="Search for products"
+              className="w-full outline-none border-none text-gray-600"
+            />
+          </div>
+        </div>
       </div>
     </header>
   );

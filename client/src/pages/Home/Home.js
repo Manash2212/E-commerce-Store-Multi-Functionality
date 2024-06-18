@@ -13,8 +13,8 @@ import ContactUs from "../../components/Contact/ContactUs";
 
 const Home = () => {
   return (
-    <div className="pt-[80px] pb-3 w-full  ">
-      <Slider autoSlide={true} autoSlideInterval={2000}>
+    <div className="pt-[10px] pb-3 w-full scroll-smooth">
+      <Slider autoSlide={true} autoSlideInterval={3000}>
         {SLIDER_IMAGES.map((slider, i) => (
           <img
             className="min-w-full h-full object-cover"

@@ -14,7 +14,7 @@ const Product = () => {
     "https://images.unsplash.com/photo-1698310876812-1c7f92bfbe4a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
   return (
-    <div className="product py-[100px] px-5  font-primary">
+    <div className="product py-[10px] px-5  font-primary">
       <div className="container flex gap-4">
         <div className="left flex gap-4  w-[50%] ">
           <div className="image flex flex-col gap-4  ">

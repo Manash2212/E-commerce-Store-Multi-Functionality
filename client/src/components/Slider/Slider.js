@@ -22,7 +22,7 @@ const Slider = ({
     return () => clearInterval(slideInterval);
   });
   return (
-    <div className="slider w-full h-[85vh]">
+    <div className="slider w-full h-[78vh]">
       <div className="container overflow-hidden flex  max-w-[100vw]  h-full relative ">
         <div
           className="img-container flex transition-all ease-in duration-500"
