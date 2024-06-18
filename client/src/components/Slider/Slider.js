@@ -10,10 +10,10 @@ const Slider = ({
   // slider Hook
   const [currentSlide, setCurrentSlide] = useState(0);
   const PrevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 3 : (prev) => prev - 1);
+    setCurrentSlide(currentSlide === 0 ? 4 : (prev) => prev - 1);
   };
   const NextSlide = () => {
-    setCurrentSlide(currentSlide === 3 ? 0 : (prev) => prev + 1);
+    setCurrentSlide(currentSlide === 4 ? 0 : (prev) => prev + 1);
   };
 
   useEffect(() => {

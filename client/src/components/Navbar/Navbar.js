@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import react icons
 import { IoIosArrowDown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
@@ -7,11 +7,26 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
 // import Links from react-router-dom
 import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
+  // for Cart
+  const [IsOpen, setIsOpen] = useState(false);
+  // for Navbar
+  const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
+    });
+  });
   return (
-    <section className="navbar py-2 px-5 text-lg box-border font-primary w-full fixed z-10">
-      <div className="Wrapper flex items-center justify-between">
+    // navbar py-2 px-5 text-lg box-border font-primary w-full fixed z-10
+    <header
+      className={`${
+        isActive ? " bg-gray-200/95 py-1 shadow-md" : "bg-none "
+      }  text-lg box-border font-primary w-full sticky z-10`}
+    >
+      <div className="Wrapper flex items-center py-2 px-5 justify-between">
         <div className="Left flex gap-3">
           <div className="item flex gap-1 items-center ">
             <img
@@ -80,10 +95,12 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="item relative w-8 ">
-              <Link className="cursor-pointer text-2xl" to={"/"}>
-                <MdOutlineShoppingCart />
-              </Link>
+            <div
+              className="item relative w-8  "
+              onClick={() => setIsOpen(!IsOpen)}
+            >
+              <MdOutlineShoppingCart className="cursor-pointer text-2xl" />
+
               <div className="absolute  right-0 -top-1 rounded-full  w-4 h-4 text-sm bg-blue-400 text-white flex items-center justify-center">
                 <span className=" ">5</span>
               </div>
@@ -91,7 +108,24 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </section>
+      {IsOpen && <Cart />}
+      {/* bg-gray-400 fixed top-0 w-full" */}
+      <div
+        className={`${isActive ? "fixed top-0" : "sticky"} bg-gray-400 w-full`}
+      >
+        <ul className="flex items-center justify-around">
+          <li>Men</li>
+          <li>Men</li>
+          <li>Men</li>
+          <li>Men</li>
+          <li>Men</li>
+          <li>Men</li>
+          <li>Men</li>
+          <li>Men</li>
+          <li>Men</li>
+        </ul>
+      </div>
+    </header>
   );
 };
 

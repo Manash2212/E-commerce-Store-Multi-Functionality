@@ -14,24 +14,24 @@ const Product = () => {
     "https://images.unsplash.com/photo-1698310876812-1c7f92bfbe4a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
   return (
-    <div className="product py-[100px] px-5 h-screen font-primary">
+    <div className="product py-[100px] px-5  font-primary">
       <div className="container flex gap-4">
-        <div className="left flex gap-4  w-[50%] border-2 border-red-500">
+        <div className="left flex gap-4  w-[50%] ">
           <div className="image flex flex-col gap-4  ">
             <img
               src={images[0]}
               alt=""
-              className="w-[150px] h-[150px] object-cover cursor-pointer"
+              className="w-[120px] h-[120px] object-cover cursor-pointer"
               onClick={() => setSelectedImage(0)}
             />
             <img
               src={images[1]}
               alt=""
-              className="w-[150px] h-[150px] object-cover cursor-pointer"
+              className="w-[120px] h-[120px] object-cover cursor-pointer"
               onClick={() => setSelectedImage(1)}
             />
           </div>
-          <div className="mainImage w-[600px] h-[650px] shadow-lg">
+          <div className="mainImage w-[600px] h-[600px] shadow-lg">
             <img
               src={images[selectedImage]}
               alt=""
@@ -41,7 +41,9 @@ const Product = () => {
         </div>
         <div className="right  flex flex-col w-[50%]">
           <h1 className="text-2xl font-bold ">Latex Shego inspired Catsuit</h1>
-          <span className="tracking-wider my-2 text-xl ">₹9999</span>
+          <span className="tracking-wider my-2 text-xl text-blue-600 font-semibold  ">
+            ₹9999
+          </span>
           <p className="text-md">
             {" "}
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
@@ -66,12 +68,12 @@ const Product = () => {
               <FaPlus />
             </button>
           </div>
-          <button className="add uppercase w-[150px] flex items-center justify-center gap-2 py-1 my-4 font-semibold bg-yellow-400 text-black">
+          <button className="add uppercase w-[180px] flex items-center justify-center gap-2 py-1.5  my-4 font-semibold bg-blue-400 text-white">
             <MdAddShoppingCart className="text-xl" />
             Add to cart
           </button>
           <div className="wish-compare flex mt-2 gap-4">
-            <span className="underline flex items-center justify-center text-red-600 cursor-pointer uppercase font-medium py-1 px-2 gap-2">
+            <span className="underline flex items-center justify-center text-blue-600 cursor-pointer uppercase font-medium py-1 px-2 gap-2">
               <IoMdHeartEmpty className="text-xl underline" /> Add to Wish list
             </span>
             <span className="underline flex items-center justify-center text-blue-600 cursor-pointer uppercase font-medium py-1 px-2 gap-2">
@@ -85,13 +87,13 @@ const Product = () => {
           </div>
           <span></span>
           <div className="details">
-            <h2 className="text-gray-500 font-normal mb-2 border-b-2 border-gray-500 w-[150px]">
+            <h2 className="text-gray-500 font-normal mb-2 border-b-[1px] border-gray-500 w-[150px]">
               DESCRIPTION
             </h2>
-            <h2 className="text-gray-500 font-normal mb-2 border-b-2 border-gray-500 w-[150px]">
+            <h2 className="text-gray-500 font-normal mb-2 border-b-[1px] border-gray-500 w-[150px]">
               Addtional Information
             </h2>
-            <h2 className="text-gray-500 font-normal mb-2 border-b-2 border-gray-500 w-[150px]">
+            <h2 className="text-gray-500 font-normal mb-2 border-b-[1px] border-gray-500 w-[150px]">
               FAQ
             </h2>
           </div>

@@ -22,8 +22,10 @@ export const FEATURED_PRODUCTS_DATA = [
     img2: "https://images.unsplash.com/photo-1527189919029-aeb3d997547d?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     isNew: true,
     title: "DRAPED LINGERIE-STYLE DRESS",
-    oldprice: 24899,
-    newprice: 20499,
+    oldprice: 7499,
+    newprice: 5459,
+    description:
+      "Discover our Featured Product, the ultimate blend of style and functionality. Handpicked for its superior quality, this item promises unmatched performance and elegance. Perfect for enhancing your lifestyle, it offers exceptional value. Don't miss out on this exclusive product—upgrade your shopping experience today with our top-rated selection!  ",
   },
   {
     id: 2,
@@ -33,6 +35,8 @@ export const FEATURED_PRODUCTS_DATA = [
     title: "COOFANDY Mens Sport Casual Blazer ",
     oldprice: 5745,
     newprice: 4499,
+    description:
+      "Discover our Featured Product, the ultimate blend of style and functionality. Handpicked for its superior quality, this item promises unmatched performance and elegance. Perfect for enhancing your lifestyle, it offers exceptional value. Don't miss out on this exclusive product—upgrade your shopping experience today with our top-rated selection!  ",
   },
   {
     id: 3,
@@ -42,6 +46,8 @@ export const FEATURED_PRODUCTS_DATA = [
     title: "Latex Shego inspired Catsuit",
     oldprice: 11999,
     newprice: 9999,
+    description:
+      "Discover our Featured Product, the ultimate blend of style and functionality. Handpicked for its superior quality, this item promises unmatched performance and elegance. Perfect for enhancing your lifestyle, it offers exceptional value. Don't miss out on this exclusive product—upgrade your shopping experience today with our top-rated selection!  ",
   },
   {
     id: 4,
@@ -51,6 +57,8 @@ export const FEATURED_PRODUCTS_DATA = [
     title: "Top Set Top Women Combo",
     oldprice: 7449,
     newprice: 6499,
+    description:
+      "Discover our Featured Product, the ultimate blend of style and functionality. Handpicked for its superior quality, this item promises unmatched performance and elegance. Perfect for enhancing your lifestyle, it offers exceptional value. Don't miss out on this exclusive product—upgrade your shopping experience today with our top-rated selection!  ",
   },
 ];
 
